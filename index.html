@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="theme-color" content="#0aa7ce">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+                <script src='js/jquery.min.js' type="text/javascript" charset="utf-8">
+        </script>
+        <link rel="stylesheet" href="fontawesome-free/css/all.css" type="text/css" media="all" />   
+        <title></title>
+        <style type="text/css" media="all">
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Comic Sans MS;
+            }
+            body 
+            {
+                background: #232c33;
+            }
+            nav
+            {
+                width: 100%;
+                height: 10%;
+                background: #695686;
+            }
+            .toggle
+            {
+                width: 40px;
+                height: 40px;
+                background: #4178f6;
+                float: right;
+                margin: 10px;
+                position: relative;
+                
+            }
+            .toggle span
+            {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            width: 30px;
+            height: 2px;
+            background: #fff;
+            border-radius: 10px;
+            }
+            .toggle span:nth-child(2)
+            {
+                top: 20px;
+            }
+            .toggle span:nth-child(3)
+            {
+                top: 30px;
+            }
+            nav .navigation
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width:0px;
+                height: 100%;
+                background: #2b343b;
+                box-shadow:3px 0 0 #4178f6;
+                border-left: 10px solid #2b343b;
+                overflow-x: hidden;
+                transition: width 0.5s;
+                transform: translateX(-20px);
+            }
+            nav .navigation.active
+            {
+                width: 90px;
+                transform: translateX(0px);
+            }
+            nav .navigation:hover
+            {
+                width: 300px;
+            }
+            nav .navigation ul 
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding-left: 10px;
+                padding-top: 40px;
+            }
+            nav .navigation ul li
+            {
+                position: relative;
+                list-style: none;
+                width: 100%;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            nav .navigation ul li.active
+            {
+                background: #4187f6;
+            }
+            nav .navigation ul li.active a::before
+            {
+                content: '';
+                position: absolute;
+                top: -30px;
+                right: 0;
+                background: transparent;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                box-shadow: 10px 10px 0 #4187f6;
+            }
+            nav .navigation ul li.active a::after
+            {
+                content: '';
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+                background: transparent;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                box-shadow: 10px -10px 0 #4187f6;
+            }
+            nav .navigation ul li a 
+            {
+                position: relative;
+                display: block;
+                width: 100%;
+                display: flex;
+                text-decoration: none;
+                color: #fff;
+            }
+            nav .navigation ul li a .icon
+            {
+                position: relative;
+                display: block;
+                min-width: 60px;
+                height: 60px;
+                line-height: 70px;
+                text-align: center;
+            }
+            nav .navigation ul li a .icon i 
+            {
+                font-size: 1.5em;
+                position: relative;
+                z-index: 1;
+            }
+            nav .navigation ul li a .title
+            {
+                position: relative;
+                display: block;
+                padding-left: 10px;
+                line-height: 60px;
+                white-space: nowrap;
+                height: 60px;
+                font-weight: 600;
+            }
+            
+            
+            @media (max-width :789px)
+            {
+                
+                nav .navigation:hover
+                {
+                    width: 250px;
+                }
+                nav .navigation ul li a .icon i 
+               {
+                   font-size: 1em;
+               } 
+                nav .navigation ul li a .title
+                {
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <nav>
+        
+        <div class="navigation active">
+            <ul >
+                <li class="list active">
+                    <a href="index.html">
+                        <span class="icon">
+                            <i class="fas fa-laptop-house"></i>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fas fa-x-ray"></i>
+                        </span>
+                        <span class="title">Categories</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fas fa-flag"></i>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href='connect.html'>
+                        <span class="icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="title">Connect</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <script src='js/js.js' type="text/javascript" charset="utf-8">
+            
+        </script>
+  </body>
+</html>
